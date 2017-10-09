@@ -14,6 +14,10 @@ BIN_FILE=DEFAULT
 BIN_PUT_PATH=DEFAULT
 #end for output
 
+#VERSION
+VERSION_OUTPUT=DEFAULT
+#end for VERSION
+
 typeset -u INPUT_CMD
 SHELL_ROOT_PATH=$(pwd)
 
@@ -113,7 +117,20 @@ function output_ubi()
 
 function source_init
 {
- cat /dev/null > $SHELL_ROOT_PATH/log
+  cat /dev/null > $SHELL_ROOT_PATH/log
+  VERSION_OUTPUT=`sed -n '/VERSION_DEVOLOPER=/'p env.dat | sed 's/VERSION_DEVOLOPER=//'`
+  if [ -z "$VERSION_OUTPUT" ]
+   then
+     VERSION_OUTPUT=`sed -n '/VERSION_USR=/'p env.dat | sed 's/VERSION_USR=//'`
+    if [ -z "$VERSION_OUTPUT" ]
+    then
+	echo "VERSION: Unknown"
+    else
+	echo "VERSION: $VERSION_OUTPUT"
+    fi
+  else
+    echo "VERSION_devolopment: $VERSION_OUTPUT"
+  fi
 }
 
 function main()
