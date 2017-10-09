@@ -1,0 +1,180 @@
+[10:40:45] - build.py: Platform is:linux2
+[10:40:45] - build.py: Python Version is:2.7.3 (default, Jun 22 2015, 19:33:41) 
+[GCC 4.6.3]
+[10:40:45] - build.py: Current directory is:/mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build
+[10:40:45] - build.py: Loading the Meta-Info file
+[10:40:45] - Filters specified for compilation:
+[10:40:45] - ['non_hlos', 'non-hlos', 'nonhlos', 'hlos']
+[10:40:45] - update_common_info.py: Calling gen_cmm_data3 to create /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build/app/gen_buildflavor.cmm
+[10:40:45] - Executing: python app/gen_cmm_data3.py /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145 /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build/app/gen_buildflavor.cmm
+Platform is:linux2
+Python Version is:2.7.3 (default, Jun 22 2015, 19:33:41) 
+[GCC 4.6.3]
+Current directory is:/mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build
+Args are:['app/gen_cmm_data3.py', '/mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145', '/mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build/app/gen_buildflavor.cmm']
+Processing meta info
+Calling function to create cmm with relative paths.
+Getting all cmm_var values:
+  Writing HLOS_TYPE
+  Writing CHIPID
+Getting all cmm_file_var values:
+  Writing MPSS_BINARY
+  Writing MPSS_ELF
+  Writing APSS_BINARY
+  Writing APSSBOOT_BINARY
+  Writing RPM_ELF
+  Writing APSS_ELF
+  Writing BOOT_TZ_MBN
+  Writing TZ_BINARY
+  Writing BOOT_ELF
+  Writing RPM_BINARY
+  Writing MBA_BINARY
+  Writing TZ_ELF
+  Writing BOOT_BINARY
+Looping through each flavor:
+No flavors found, taking 'None' as default flavor.
+  Processing flavor - None
+    Writing file list for MPSS_BINARY
+    Writing file list for MPSS_ELF
+    Writing file list for APSS_BINARY
+    Writing file list for APSSBOOT_BINARY
+    Writing file list for RPM_ELF
+    Writing file list for APSS_ELF
+    Writing file list for BOOT_TZ_MBN
+    Writing file list for TZ_BINARY
+    Writing file list for BOOT_ELF
+    Writing file list for RPM_BINARY
+    Writing file list for MBA_BINARY
+    Writing file list for TZ_ELF
+    Writing file list for BOOT_BINARY
+Saving cmm script.
+[10:40:46] - build.py: Writing FAT images
+[10:40:46] - update_common_info.py: Processing partition.xml
+[10:40:46] - build.py:  /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build/rawprogram0.xml path does not exist. Could not create sparse images.
+[10:40:46] - build.py:  --------------------------------------------------
+[10:40:46] - build.py:   Calling nand_mbn_generator.py 
+[10:40:46] - build.py:  --------------------------------------------------
+
+[10:40:46] - Executing: python /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/boot_images/core/storage/tools/nandbootmbn/nand_mbn_generator.py ./../config/partition_nand.xml partition.mbn
+
+Created 'partition.mbn'
+Created 'rawprogram_nand_p4K_b256K.xml'
+Created 'partition_complete_p4K_b256K.mbn'
+Created 'patch_p4K_b256K.xml'
+[10:40:46] - update_common_info.py: Deleted the file ./NON-HLOS.ubifs
+[10:40:46] - update_common_info.py: Deleted the file ./NON-HLOS.ubi
+[10:40:46] - update_common_info.py: Unable to delete ./NON-HLOS.ext4
+[10:40:46] - update_common_info.py: Deleted the directory ./bin/image
+[10:40:46] - update_common_info.py: Creating directory ./bin/image
+[10:40:46] - build.py:  --------------------------------------------------
+[10:40:46] - build.py:   Calling pil-splitter.py 
+[10:40:46] - build.py:  --------------------------------------------------
+
+[10:40:46] - Executing: python /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/config/pil-splitter.py /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/qdsp6sw.mbn ./bin/image/modem
+BIN ./bin/image/modem.mdt
+BIN ./bin/image/modem.b00
+BIN ./bin/image/modem.b01
+BIN ./bin/image/modem.b02
+BIN ./bin/image/modem.b03
+BIN ./bin/image/modem.b05
+BIN ./bin/image/modem.b06
+BIN ./bin/image/modem.b07
+BIN ./bin/image/modem.b08
+BIN ./bin/image/modem.b09
+BIN ./bin/image/modem.b10
+BIN ./bin/image/modem.b11
+BIN ./bin/image/modem.b12
+BIN ./bin/image/modem.b13
+BIN ./bin/image/modem.b14
+BIN ./bin/image/modem.b17
+BIN ./bin/image/modem.b18
+BIN ./bin/image/modem.b19
+BIN ./bin/image/modem.b20
+BIN ./bin/image/modem.b21
+BIN ./bin/image/modem.b22
+[10:40:46] - build.py:  --------------------------------------------------
+
+[10:40:46] - Executing: python /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/config/pil-splitter.py /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/mba.mbn ./bin/image/mba
+BIN ./bin/image/mba.mdt
+BIN ./bin/image/mba.b00
+BIN ./bin/image/mba.b01
+BIN ./bin/image/mba.b02
+BIN ./bin/image/mba.b03
+BIN ./bin/image/mba.b04
+BIN ./bin/image/mba.b05
+[10:40:46] - build.py: --------------------------------------------------
+[10:40:46] - build.py:  Starting copy
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/bt_firmware/bt/build/ms/bin/QCA9377/tfbtfw11.tlv to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/bt_firmware/bt/build/ms/bin/QCA9377/tfbtnv11.bin to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/mba.mbn to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/otp.bin to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/qwlan.bin to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/utf.bin to ./bin/image
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/halphy/ftm/host/systemtools/tools/eepromUtil/qc9377/bdwlan.bin to ./bin/image
+[10:40:46] - build.py: --------------------------------------------------
+
+[10:40:46] - build.py: --------------------------------------------------
+[10:40:46] - build.py:  Starting copy
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/boot_images/build/ms/bin/9x07/nand/ENPRG9x07.mbn to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/boot_images/build/ms/bin/9x07/nand/NPRG9x07.mbn to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/boot_images/build/ms/bin/9x07/nand/sbl1.mbn to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/bt_firmware/bt/build/ms/bin/QCA9377/tfbtfw11.tlv to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/bt_firmware/bt/build/ms/bin/QCA9377/tfbtnv11.bin to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/build/partition.mbn to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/efs1.bin to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/efs2.bin to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/efs3.bin to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/mba.mbn to ./../../binaries
+[10:40:46] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/modem_proc/build/ms/bin/9607.genns.prod/qdsp6sw.mbn to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/rpm_proc/build/ms/bin/9x07/rpm.mbn to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/trustzone_images/build/ms/bin/MARAANAA/tz.mbn to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/otp.bin to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/qwlan.bin to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/.output/AR6320/hw.3/bin/utf.bin to ./../../binaries
+[10:40:47] - Copying /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/wlan_firmware/wlan/fw/target/halphy/ftm/host/systemtools/tools/eepromUtil/qc9377/bdwlan.bin to ./../../binaries
+[10:40:47] - build.py: --------------------------------------------------
+
+[10:40:47] - build.py: --------------------------------------------------
+[10:40:47] - build.py:  Starting copy
+[10:40:47] - build.py: --------------------------------------------------
+
+[10:40:47] - build.py: --------------------------------------------------
+[10:40:47] - build.py:  Starting copy
+[10:40:47] - build.py: --------------------------------------------------
+
+[10:40:47] - build.py:  --------------------------------------------------
+[10:40:47] - build.py:   Calling mkfs.ubifs 
+[10:40:47] - build.py:  --------------------------------------------------
+
+[10:40:47] - Executing: /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/config/storage/mkfs.ubifs -r ./bin -o NON-HLOS.ubifs -m 4096 -e 253952 -c 567 -F
+[10:40:50] - build.py:  --------------------------------------------------
+[10:40:50] - build.py:   Calling ubinize 
+[10:40:50] - build.py:  --------------------------------------------------
+
+[10:40:50] - Executing: /mnt/L506/V0/devoloper/mdm9607-le-1-0_amss_standard_oem_r145/common/config/storage/ubinize -v -o NON-HLOS.ubi -m 4096 -p 256KiB -s 4096 ./../config/my_ubi.ini
+ubinize: LEB size:                  253952
+ubinize: PEB size:                  262144
+ubinize: min. I/O size:             4096
+ubinize: sub-page size:             4096
+ubinize: VID offset:                4096
+ubinize: data offset:               8192
+ubinize: UBI image sequence number: 369852690
+ubinize: loaded the ini-file "./../config/my_ubi.ini"
+ubinize: count of sections: 1
+
+ubinize: parsing section "ubifs"
+ubinize: mode=ubi, keep parsing
+ubinize: volume type: dynamic
+ubinize: volume ID: 0
+ubinize: volume size was not specified in section "ubifs", assume minimum to fit image "NON-HLOS.ubifs"36823040 bytes (35.1 MiB)
+ubinize: volume name: modem
+ubinize: volume alignment: 1
+ubinize: autoresize flags found
+ubinize: adding volume 0
+ubinize: writing volume 0
+ubinize: image file: NON-HLOS.ubifs
+
+ubinize: writing layout volume
+ubinize: writing layout volume - done
+ubinize: done
+[10:40:50] - update_common_info.py:============ UPDATE COMMON INFO COMPLETE====================
